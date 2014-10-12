@@ -12,6 +12,7 @@ for opt in $*; do
 
 		# Check for dry run
 		if [ $opt == "--dry-run" ]; then
+			echo "Dry run"
 			dryRun=true
 		fi
 
@@ -55,7 +56,7 @@ do
 	if [ "$grepResult" != "" ]; then
 		
 		# If dry run, do not remove anything
-		if [ $dryRun ]; then
+		if [ $dryRun = true ]; then
 			echo "$dir/$filename"
 		else
 			# Remove file
